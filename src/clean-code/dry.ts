@@ -14,7 +14,7 @@ class Product {
                         if ( (this[key] as string ).length <= 0 ) throw Error(`${ key} is empty`);
                     break;
                 case 'number':
-                    if ( (this[key] as number ).length <= 0 ) throw Error(`${ key} is empty`);
+                        if ( (this[key] as number ) <= 0 ) throw Error(`${ key} is empty`);
                     break;
                 default:
                         throw Error(`${ typeof this[key]} is not valid - ${key}`);
@@ -33,5 +33,4 @@ class Product {
 (()=>{
     const bluePants = new Product('Pants', 10, 'M')
     console.log(bluePants.toString());
-    
 })();
